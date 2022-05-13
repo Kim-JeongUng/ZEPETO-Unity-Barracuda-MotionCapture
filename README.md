@@ -6,4 +6,4 @@ ZEPETO PoseEstimation
 #### UnityChan -> 제페토 캐릭터 리깅 필요
 
 
-ThreeDPose 오픈소스 -> https://github.com/Kim-JeongUng/ThreeDPoseUnityBarracuda
+ThreeDPose 오픈소스 -> https://github.com/digital-standard/ThreeDPoseUnityBarracuda
