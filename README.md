@@ -3,7 +3,7 @@
 #### digital-standard의 [ThreeDPoseUnityBarracuda 오픈소스](https://github.com/digital-standard/ThreeDPoseUnityBarracuda)를 이용했습니다.<br>
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/82865325/168528657-fb07afae-bc1c-4a71-a6c4-874ce59971c8.gif)<br><br>
 
-## 제페토 씬에서 바라쿠다 동작 확인
+## 제페토 씬에서 바라쿠다가 동작되게 리소스를 추가하고 제페토 캐릭터에 리깅한 샘플입니다.
 ### 녹화된 비디오
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/82865325/168556151-e79b6850-ba0b-4e8b-b3c6-41e43b083b31.gif)
 ### 실시간 웹캠
