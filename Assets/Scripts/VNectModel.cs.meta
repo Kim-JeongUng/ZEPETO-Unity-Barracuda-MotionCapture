@@ -3,7 +3,10 @@ guid: 3558338e378282c4a91d1a3356b57301
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SkeletonMaterial: {fileID: 2100000, guid: f8188c9479a7aad41b7448fe5eeed839, type: 2}
+  - ModelObject: {instanceID: 0}
+  - Nose: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

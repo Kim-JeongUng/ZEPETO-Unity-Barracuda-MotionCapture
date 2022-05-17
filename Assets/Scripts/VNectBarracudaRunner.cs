@@ -161,7 +161,6 @@ public class VNectBarracudaRunner : MonoBehaviour
         // Init model
         _model = ModelLoader.Load(NNModel, Verbose);
         _worker = WorkerFactory.CreateWorker(WorkerType, _model, Verbose);
-
         StartCoroutine("WaitLoad");
 
     }
