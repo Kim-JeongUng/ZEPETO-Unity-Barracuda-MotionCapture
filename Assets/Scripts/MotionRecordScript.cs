@@ -27,16 +27,16 @@ public class MotionRecordScript : MonoBehaviour
     }
     public void OnClickRecordStop()
     {
-        recordObject.GetComponent<Entum.MotionDataRecorder>().RecordStart();
+        recordObject.GetComponent<Entum.MotionDataRecorder>().RecordEnd();
     }
 
     public void OnClickPlay()
     {
-        recordObject.GetComponent<Entum.MotionDataPlayer>().PlayMotion();
+        playObject.GetComponent<Entum.MotionDataPlayer>().PlayMotion();
     }
     public void OnClickStop()
     {
-        recordObject.GetComponent<Entum.MotionDataPlayer>().StopMotion();
+        playObject.GetComponent<Entum.MotionDataPlayer>().StopMotion();
     }
 
 }

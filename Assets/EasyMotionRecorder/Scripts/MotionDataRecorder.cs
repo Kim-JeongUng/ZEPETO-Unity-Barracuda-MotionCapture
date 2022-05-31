@@ -237,8 +237,9 @@ namespace Entum
         {
 #if UNITY_EDITOR
             SafeCreateDirectory("Assets/Resources");
-
-            var path = string.Format("Assets/Resources/RecordMotion_{0}{1:yyyy_MM_dd_HH_mm_ss}.asset", _animator.name, DateTime.Now);
+            var countAsset = DirCount(new System.IO.DirectoryInfo("Assets/Resources"));
+            var path = string.Format("Assets/Resources/RecordMotion{0}.asset", countAsset);
+            //var path = string.Format("Assets/Resources/RecordMotion_{0}{1:yyyy_MM_dd_HH_mm_ss}.asset", _animator.name, DateTime.Now);
             var uniqueAssetPath = AssetDatabase.GenerateUniqueAssetPath(path);
 
             AssetDatabase.CreateAsset(Poses, uniqueAssetPath);
@@ -248,7 +249,18 @@ namespace Entum
             FrameIndex = 0;
 #endif
         }
-
+        public static long DirCount(DirectoryInfo d)
+        {
+            long i = 0;
+            Debug.Log(d);
+            FileInfo[] fis = d.GetFiles();
+            foreach (FileInfo fi in fis)
+            {
+                if (fi.Extension.Equals(".asset", StringComparison.OrdinalIgnoreCase))
+                    i++;
+            }
+            return i;
+        }
         /// <summary>
         /// 指定したパスにディレクトリが存在しない場合
         /// すべてのディレクトリとサブディレクトリを作成します

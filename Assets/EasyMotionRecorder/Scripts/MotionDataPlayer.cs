@@ -9,6 +9,7 @@ http://opensource.org/licenses/mit-license.php
 
 using UnityEngine;
 using System;
+using System.IO;
 
 namespace Entum
 {
@@ -90,8 +91,15 @@ namespace Entum
         /// <summary>
         /// モーションデータ再生開始
         /// </summary>
-        private void PlayMotion()
+        public static DirectoryInfo SafeCreateDirectory(string path)
         {
+            return Directory.Exists(path) ? null : Directory.CreateDirectory(path);
+        }
+        public void PlayMotion()
+        {
+            string countAsset = DirCount(new System.IO.DirectoryInfo("Assets/Resources")).ToString();
+            var res = Resources.Load<Entum.HumanoidPoses>("RecordMotion"+countAsset);
+            RecordedMotionData = res;
             if (_playing)
             {
                 return;
@@ -103,16 +111,30 @@ namespace Entum
                 return;
             }
 
-
             _playingTime = _startFrame * (Time.deltaTime / 1f);
             _frameIndex = _startFrame;
             _playing = true;
         }
 
+        public static int DirCount(DirectoryInfo d)
+        {
+            int i = 0;
+            FileInfo[] fis = d.GetFiles();
+            foreach (FileInfo fi in fis)
+            {
+                if (fi.Extension.Contains(".asset"))
+                    i++;
+            }
+            i--;
+            if (i >= 0)
+                return i;
+            else
+                return -1;
+        }
         /// <summary>
         /// モーションデータ再生終了。フレーム数が最後になっても自動で呼ばれる
         /// </summary>
-        private void StopMotion()
+        public void StopMotion()
         {
             if (!_playing)
             {

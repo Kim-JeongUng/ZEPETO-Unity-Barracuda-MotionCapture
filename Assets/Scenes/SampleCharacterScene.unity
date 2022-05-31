@@ -157,10 +157,10 @@ RectTransform:
   m_Father: {fileID: 621910221}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 320, y: 60}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -320, y: 0}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &14585648
 MonoBehaviour:
@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 14585649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 621910222}
+        m_TargetAssemblyTypeName: MotionRecordScript, Assembly-CSharp
+        m_MethodName: OnClickRecordStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &14585649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +326,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 320, y: 60}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &64806399
 MonoBehaviour:
@@ -359,7 +371,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64806400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 621910222}
+        m_TargetAssemblyTypeName: MotionRecordScript, Assembly-CSharp
+        m_MethodName: OnClickPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &64806400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,10 +549,10 @@ RectTransform:
   m_Father: {fileID: 621910221}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 320, y: 60}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -320, y: -120}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &181139094
 MonoBehaviour:
@@ -573,7 +597,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 181139095}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 621910222}
+        m_TargetAssemblyTypeName: MotionRecordScript, Assembly-CSharp
+        m_MethodName: OnClickRecordStop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &181139095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,6 +913,11 @@ MonoBehaviour:
   - {fileID: 518673796}
   debug: 1
   threshold: 0.01
+--- !u!1 &335131827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076081908508874, guid: 26de42e5745b2b547b1714ecb3625597, type: 3}
+  m_PrefabInstance: {fileID: 1071688168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &338212910 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8315583863143335264, guid: 376f47ea3b23a0c4390f513d69e1ca66, type: 3}
@@ -1436,6 +1477,7 @@ GameObject:
   - component: {fileID: 621910220}
   - component: {fileID: 621910219}
   - component: {fileID: 621910218}
+  - component: {fileID: 621910222}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1492,7 +1534,7 @@ Canvas:
   m_GameObject: {fileID: 621910217}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 534669904}
   m_PlaneDistance: 1
   m_PixelPerfect: 0
@@ -1528,6 +1570,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &621910222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621910217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604c4877f4287ec4ba115dd9684c41dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordObject: {fileID: 1466926310}
+  playObject: {fileID: 335131827}
 --- !u!1 &639438622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,10 +1618,10 @@ RectTransform:
   m_Father: {fileID: 621910221}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 320, y: 60}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -120}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &639438624
 MonoBehaviour:
@@ -1610,7 +1666,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 639438625}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 621910222}
+        m_TargetAssemblyTypeName: MotionRecordScript, Assembly-CSharp
+        m_MethodName: OnClickStop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &639438625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3752,6 +3820,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+--- !u!1 &1466926310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1076081908508874, guid: 26de42e5745b2b547b1714ecb3625597, type: 3}
+  m_PrefabInstance: {fileID: 2116796275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1482375111
 GameObject:
   m_ObjectHideFlags: 0
@@ -4964,7 +5037,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1664867594173890, guid: 335bd75208949461bbb789d261c756a1, type: 3}
       propertyPath: m_Name
-      value: ZepetoBaseModel (1)
+      value: ZepetoBasePlay
       objectReference: {fileID: 0}
     - target: {fileID: 1664867594173890, guid: 335bd75208949461bbb789d261c756a1, type: 3}
       propertyPath: m_IsActive
@@ -5014,6 +5087,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95486631731391036, guid: 335bd75208949461bbb789d261c756a1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 335bd75208949461bbb789d261c756a1, type: 3}
 --- !u!1 &2131442487 stripped
@@ -5028,7 +5105,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131442487}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3558338e378282c4a91d1a3356b57301, type: 3}
   m_Name: 
@@ -5096,9 +5173,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8315583863135958854, guid: 376f47ea3b23a0c4390f513d69e1ca66, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8315583863135958854, guid: 376f47ea3b23a0c4390f513d69e1ca66, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c80dbec155708994480231da88754eee, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8315583863135958854, guid: 376f47ea3b23a0c4390f513d69e1ca66, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
