@@ -25,10 +25,14 @@
 2. 웹캠의 중앙부에서 촬영
 3. 가능한 빈 공간에서 촬영
 
+## Prerequirement
+- 제페토 탬플릿을 사전에 다운로드해야합니다. (2020.3.9f. 빈 템플릿에서 [제페토 SDK](https://upm.zepeto.run/setup/package)를 실행)
+- 필수적으로 이 프로젝트는 유니티 2020.3.9f에서 실행됩니다. (그렇지않으면 제페토 캐릭터를 불러올 수 없습니다.)
+- 제페토에 대한 설명은 [제페토 가이드](https://studio.zepeto.me/guides/installing-unity-and-registering-zepeto-template) 를 따르세요
+- 내 캐릭터를 불러오는 법은 Assets/CharacterController.ts 파일에서 확인할 수 있습니다.
+
 ## ISSUE
-- 현재 [제페토 월드](https://studio.zepeto.me/guides/unity_package_list)에서 com.unity.barracuda를 지원하지 않습니다. (현재 모바일으로 플레이시 동작하지 않음)
-
-
+- 현재 [제페토 월드](https://studio.zepeto.me/guides/unity_package_list)에서 com.unity.barracuda를 지원하지 않습니다. (현재 모바일으로 플레이시 동작하지 않습니다.)
 
 ## Future plans
 - 제페토서버통신으로 잼을 가져와 모션을 구매합니다.
